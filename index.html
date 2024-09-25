@@ -90,6 +90,7 @@
                 <a href="" target="_blank" rel="noopener noreferrer">
                 Kaiqiang Zhou<sup>4</sup></a>,
               </span>
+              <br>
             <span class="author-block">
                 <a href="" target="_blank" rel="noopener noreferrer">
                 Hongbo Liu<sup>4</sup></a>,
@@ -105,9 +106,9 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Hong Kong University of Science and Technology (Guangzhou)</span>
+            <span class="author-block"><sup>1</sup>HKUST(GZ)</span>
             <span class="author-block"><sup>2</sup>University of Adelaide</span>
-            <span class="author-block"><sup>3</sup>Hong Kong University of Science and Technology</span>
+            <span class="author-block"><sup>3</sup>HKUST</span>
             <span class="author-block"><sup>4</sup>Noah's Ark Lab</span>
             <span class="author-block">
                 <sup style="color:red;">&#10033;</sup><strong>Both authors contributed equally (order randomized).</strong>
@@ -134,7 +135,7 @@
                       <i class="fab fa-github"></i>
                   </span>
                   <span>
-                    Code
+                    Code (before 07/10/2024)
                   </span>
                 </a>
               </span>
@@ -145,7 +146,7 @@
                   <span class="icon">
                       &#129303;
                   </span>
-                  <span>Huggingface Demo</span>
+                  <span>Huggingface Demo (before 07/10/2024)</span>
                 </a>
               </span>
             </div>
@@ -177,31 +178,18 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- <p>
-            We introduce <span class="methodname" style="font-weight: bold;">Lotus</span>,
-            a diffusion-based visual foundation model with a simple yet effective adaptation protocol for dense prediction.
-            Through systematic analysis and specifically tailored diffusion formulation, <span class="methodname" style="font-weight: bold;">Lotus</span> finds a way to better fit the rich visual prior from pre-trained diffusion models into dense prediction.
-            Extensive experiments demonstrate that <span class="methodname" style="font-weight: bold;">Lotus</span> achieves SoTA performance on unseen datasets in monocular depth and normal estimation with only 59K training data.
-          </p> -->
-
-          <p>
-Leveraging the visual priors of pre-trained text-to-image diffusion models offers a promising solution to enhance zero-shot generalization in dense prediction tasks.
-However, existing methods often uncritically use the original diffusion formulation, which may not be optimal due to the fundamental differences between dense prediction and image generation.
-          </p>
-          <p>
-In this paper, we provide a systemic analysis of the diffusion formulation for the dense prediction, focusing on both quality and efficiency.
-We find that the original parameterization type for image generation, which learns to predict noise, is harmful for dense prediction and the multi-step noising/denoising diffusion process is unnecessary and challenging to optimize.
-            </p>
-            <p>
-Based on these insights, we introduce <span class="methodname" style="font-weight: bold;">Lotus</span>, a diffusion-based visual foundation model with a simple yet effective adaptation protocol for dense prediction.
-Specifically, <span class="methodname" style="font-weight: bold;">Lotus</span> is trained to directly predict annotations instead of noise, thereby avoiding harmful variance. We also reformulate the diffusion process into a single-step procedure, simplifying optimization and significantly boosting inference speed.
-Additionally, we introduce a novel detail preserver to achieve more fine-grained predictions.
-            </p>
-            <p>
-Without scaling up the training data or model capacity, <span class="methodname" style="font-weight: bold;">Lotus</span> achieves SoTA performance in zero-shot depth and normal estimation across various datasets, with over
-$10\%$ performance gains in specific cases. It also enhances efficiency, being $600+$ times faster than existing diffusion-based methods.
-<!-- Lotus's superior quality and efficiency enable a wide range of practical applications, such as joint estimation, single/multi-view 3D reconstruction, etc. -->
-          </p>
+        <p>
+            Leveraging the visual priors of pre-trained text-to-image diffusion models offers a promising solution to enhance zero-shot generalization in dense prediction tasks.
+            However, existing methods often uncritically use the original diffusion formulation, which may not be optimal due to the fundamental differences between dense prediction and image generation.
+        </p><p>
+            In this paper, we provide a systemic analysis of the diffusion formulation for the dense prediction, focusing on both quality and efficiency. And we find that the original parameterization type for image generation, which learns to predict noise, is harmful for dense prediction; the multi-step noising/denoising diffusion process is also unnecessary and challenging to optimize.
+        </p><p>
+            Based on these insights, we introduce <span class="methodname" style="font-weight: bold;">Lotus</span>, a diffusion-based visual foundation model with a simple yet effective adaptation protocol for dense prediction.
+            Specifically, <span class="methodname" style="font-weight: bold;">Lotus</span> is trained to directly predict annotations instead of noise, thereby avoiding harmful variance. We also reformulate the diffusion process into a single-step procedure, simplifying optimization and significantly boosting inference speed. Additionally, we introduce a novel detail preserver to achieve better fine-grained predictions.
+        </p><p>
+            Without scaling up the training data or model capacity, <span class="methodname" style="font-weight: bold;">Lotus</span> achieves SoTA performance in zero-shot depth and normal estimation across various datasets, with over $10\%$ performance gains in specific cases. It also enhances efficiency, being $600+$ times faster than existing diffusion-based methods.
+            <!-- <span class="methodname" style="font-weight: bold;">Lotus</span>' superior quality and efficiency enable a wide range of practical applications, such as joint estimation, single/multi-view 3D reconstruction, etc. -->
+        </p>
         </div>
       </div>
     </div>
