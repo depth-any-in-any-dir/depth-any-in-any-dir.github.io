@@ -164,8 +164,9 @@
       <img id="teaser" width="100%" src="./images/teaser_1.jpg" alt="Teaser 1"/>
       <img id="teaser" width="100%" src="./images/teaser_2.jpg" alt="Teaser 2"/>
       <h2 class="subtitle">
-        <span class="methodname" style="font-weight: bold;">Lotus</span> is a diffusion-based visual foundation model for dense geometry prediction.
-        With minimal training data, <span class="methodname" style="font-weight: bold;">Lotus</span> achieves SoTA performance in two key geometry perception tasks, \emph{i.e.}, zero-shot depth and normal estimation.
+        We present <span class="methodname" style="font-weight: bold;">Lotus</span>, a diffusion-based visual foundation model for dense geometry prediction.
+        With minimal training data, <span class="methodname" style="font-weight: bold;">Lotus</span> achieves SoTA performance in two key geometry perception tasks, <i>i.e.</i>, zero-shot depth and normal estimation.
+        "Avg. Rank" indicates the average ranking across all metrics, where lower values are better. Bar length represents the amount of training data used.
       </h2>
     </div>
   </div>
@@ -186,10 +187,12 @@
             In this paper, we provide a systemic analysis of the diffusion formulation for the dense prediction, focusing on both quality and efficiency. And we find that the original parameterization type for image generation, which learns to predict noise, is harmful for dense prediction; the multi-step noising/denoising diffusion process is also unnecessary and challenging to optimize.
         </p><p>
             Based on these insights, we introduce <span class="methodname" style="font-weight: bold;">Lotus</span>, a diffusion-based visual foundation model with a simple yet effective adaptation protocol for dense prediction.
-            Specifically, <span class="methodname" style="font-weight: bold;">Lotus</span> is trained to directly predict annotations instead of noise, thereby avoiding harmful variance. We also reformulate the diffusion process into a single-step procedure, simplifying optimization and significantly boosting inference speed. Additionally, we introduce a novel detail preserver to achieve better fine-grained predictions.
+            Specifically, <span class="methodname" style="font-weight: bold;">Lotus</span> is trained to directly predict annotations instead of noise, thereby avoiding harmful variance. We also reformulate the diffusion process into a single-step procedure, simplifying optimization and significantly boosting inference speed.
+            Additionally, we introduce a novel tuning strategy called detail preserver, which achieves more accurate and fine-grained predictions.
         </p><p>
-            Without scaling up the training data or model capacity, <span class="methodname" style="font-weight: bold;">Lotus</span> achieves SoTA performance in zero-shot depth and normal estimation across various datasets, with over $10\%$ performance gains in specific cases. It also enhances efficiency, being $600+$ times faster than existing diffusion-based methods.
-            <!-- <span class="methodname" style="font-weight: bold;">Lotus</span>' superior quality and efficiency enable a wide range of practical applications, such as joint estimation, single/multi-view 3D reconstruction, etc. -->
+            Without scaling up the training data or model capacity, <span class="methodname" style="font-weight: bold;">Lotus</span> achieves SoTA performance in zero-shot depth and normal estimation across various datasets. 
+            It also significantly enhances efficiency, being hundreds of times faster than most existing diffusion-based methods.
+            <!-- <span class="methodname" style="font-weight: bold;">Lotus</span>' superior quality and efficiency also enable a wide range of practical applications, such as joint estimation, single/multi-view 3D reconstruction, etc. -->
         </p>
         </div>
       </div>
