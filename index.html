@@ -326,6 +326,94 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Methodology</h2>
+        <div class="content has-text-justified">
+          <h4 class="title has-text-centered">
+            Panoramic data curation engine.
+          </h4>
+
+          <img id="method1" width="100%" src="./images/method1.jpg"/>
+          <p>
+            <strong>Panoramic data curation engine.</strong>
+            This module converts high-quality perspective RGB-depth pairs into <i>full</i> panoramas via Perspective-to-Equirectangular (P2E) projection and panoramic out-painting using FLUX-I2P.
+            It creates ~543K panoramic samples from perspective, scales the total from ~63K to ~607K, (~10 times), forming a solid training data foundation for DA<sup>2</sup>.
+            The <span style="background-color: rgba(255, 255, 0, 0.5);">highlighted</span> area on the spheres indicate the FoV coverage.
+        </p>
+
+          <h4 class="title has-text-centered">
+            Sphere-aware ViT and Its Training Losses.
+          </h4>
+          <img id="method_train" width="100%" src="./images/method2.jpg"/>
+
+          <p>
+            <strong>SphereViT and its training losses.</strong>
+            By leveraging the spherical embedding $E_\text{sphere}$, which is explicitly derived from the spherical coordinates of panoramas,
+            SphereViT produces distortion-aware image features, yielding more accurate geometrical estimation for panoramas. 
+            The training supervision combines a distance loss $\mathcal{L}_\text{dis}$ for globally accurate distance values 
+            and a normal loss $\mathcal{L}_\text{nor}$ for locally smooth and sharp surfaces.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+
+          <img id="exp" width="100%" src="./images/exp.png"/>
+          <p>
+            <strong>Quantitative comparison.</strong>
+            For a fair and comprehensive benchmark, we include both zero-shot / in-domain, panoramic / perspective approaches.
+            The <span style="background-color: rgb(255, 204, 153);">best</span> 
+            and <span style="background-color: rgb(255, 230, 217);">second best</span> 
+            performances are highlighted (in <i>zero-shot</i> setting).
+            In <i>all</i> settings (both zero-shot and in-domain), the <b>best</b> 
+            and <u>second best</u> performances are bolded and underlined.
+            DA<sup>2</sup> outperforms all others methods no matter in zero-shot or all settings, particularly showing large gains under the zero-shot setting.
+            Median alignment (scale-invariant) is adopted by default.
+            <sup>△</sup>: Affine-invariant alignment (scale and shift-invariant), for prior <i>relative</i> depth estimators: DepthAnything v1v2, Lotus, and PanDA.
+            <sup>★</sup>: Perspective methods implemented by ourselves following 
+            <a href="https://github.com/microsoft/moge?tab=readme-ov-file#360-panorama-images--moge-infer_panorama" target="_blank" rel="noopener noreferrer" class="my-link" style="color: rgb(0, 128, 255);">MoGe's panoramic pipeline</a>, .
+            Unit is percentage (%).
+          </p>
+          <p>
+            Please refer to our paper linked above for more technical details :)
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+        <h2 class="title">BibTeX</h2>
+    <pre class="selectable"><code>@article{he2024lotus,
+    title={Lotus: Diffusion-based Visual Foundation Model for High-quality Dense Prediction},
+    author={He, Jing and Li, Haodong and Yin, Wei and Liang, Yixun and Li, Leheng and Zhou, Kaiqiang and Zhang, Hongbo and Liu, Bingbing and Chen, Ying-Cong},
+    journal={arXiv preprint arXiv:2409.18124},
+    year={2024}
+}
+</code></pre>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
 <footer class="footer pt-4 pb-0">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
