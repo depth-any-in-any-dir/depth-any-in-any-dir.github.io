@@ -164,19 +164,58 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section hero is-light" style="margin-top: -30px;">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <div class="content has-text-justified">
+        <div class="content has-text-justified" style="margin-top: -30px;">
    <strong>
   DA<sup>2</sup> predicts dense, scale-invariant distance from a single 360&deg; panorama in an end-to-end manner, 
   with remarkable geometric fidelity and strong zero-shot generalization.
   </strong>
   <br>
-  <iframe src="https://depth-any-in-any-dir.github.io/viser-client/?playbackPath=https://depth-any-in-any-dir.github.io/recordings/a_0.viser&initialCameraPosition=-3.616,4.111,4.863&initialCameraLookAt=0.000,0.000,0.00"
-  style="width: 400px; height: 400px;">
+  <br>
+  <img src="images/a0.png" style="width: 379px; height: 100%; padding-right: 80px; padding-left: 80px;">
+  <img src="images/a1.png" style="width: 379px; height: 100%; padding-right: 80px; padding-left: 80px;">
+  </img>
+  <br>
+  <iframe src="https://depth-any-in-any-dir.github.io/viser-client/?playbackPath=https://depth-any-in-any-dir.github.io/recordings/a0.viser&initialCameraPosition=-4.692,4.134,3.811&initialCameraLookAt=0.000,0.000,0.00"
+  style="width: 379px; height: 300px; border: 2px solid #ccc;">
   </iframe>
+  <iframe src="https://depth-any-in-any-dir.github.io/viser-client/?playbackPath=https://depth-any-in-any-dir.github.io/recordings/a1.viser&initialCameraPosition=0.032,-3.609,4.4781&initialCameraLookAt=0.000,0.000,0.00"
+  style="width: 379px; height: 300px; border: 2px solid #ccc;">
+  </iframe>
+  <br>
+  <img src="images/a2.png" style="width: 379px; height: 100%; padding-right: 80px; padding-left: 80px;">
+  <img src="images/a3.png" style="width: 379px; height: 100%; padding-right: 80px; padding-left: 80px;">
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+        <p>
+          Panorama has a full FoV (360&deg;&times;180&deg;), offering a more complete visual description than perspective images.
+          Thanks to this characteristic, panoramic depth estimation is gaining increasing traction in 3D vision.
+          </p><p>
+          However, due to the scarcity of panoramic data, previous methods are often restricted to in-domain settings, leading to poor zero-shot generalization.
+          Furthermore, due to the spherical distortions inherent in panoramas, many approaches rely on perspective splitting (\textit{e.g.}, cubemaps),
+          which leads to suboptimal efficiency.
+          </p><p>
+            To address these challenges, we propose <strong>DA<sup>2</sup></strong>: <strong>D</strong>epth <strong>A</strong>nything in <strong>A</strong>ny <strong>D</strong>irection, an accurate, zero-shot generalizable, and fully end-to-end panoramic depth estimator.
+          Specifically, for scaling up panoramic data, we introduce a data curation engine for generating high-quality panoramic depth data from perspective, and create $\sim$543K panoramic RGB-depth pairs, bringing the total to $\sim$607K.
+          To further mitigate the spherical distortions, we present SphereViT, which explicitly leverages spherical coordinates to enforce the spherical geometric consistency in panoramic image features, yielding improved performance.
+          </p><p>
+            A comprehensive benchmark on multiple datasets clearly demonstrates DA<sup>2</sup>'s SoTA performance, with an average 38% improvement on AbsRel over the strongest zero-shot baseline.
+          Surprisingly, DA<sup>2</sup> even outperforms prior in-domain methods, highlighting its superior zero-shot generalization.
+          Moreover, as an end-to-end solution, DA<sup>2</sup> exhibits much higher efficiency over fusion-based approaches and enables a wide range of applications.
+        </p>
         </div>
       </div>
     </div>
