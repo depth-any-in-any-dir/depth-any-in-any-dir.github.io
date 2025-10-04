@@ -3,3 +3,4 @@
 node_modules
 *.py
 recordings_backup/
+recordings_with_ceiling/
