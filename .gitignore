@@ -2,3 +2,4 @@
 .idea
 node_modules
 *.py
+recordings_backup/
